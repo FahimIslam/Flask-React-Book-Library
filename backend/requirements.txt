@@ -1,0 +1,10 @@
+flask
+flask_sqlalchemy
+flask_marshmallow
+marshmallow-sqlalchemy
+flask_cors
+flask_bcrypt 
+flask_session 
+python-dotenv
+redis
+gunicorn
