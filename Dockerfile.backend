@@ -1,0 +1,9 @@
+#Dockerfile to build the Flask Backend
+FROM python:3.10.4
+WORKDIR /app
+
+COPY backend/requirements.txt backend/app.py backend/.flaskenv backend/.env backend/db.sqlite ./
+RUN pip install -r ./requirements.txt
+
+EXPOSE 5000
+CMD ["gunicorn", "-b", ":5000", "app:app"]
